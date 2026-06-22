@@ -78,16 +78,37 @@ vibe-coding/
 ├── template/                ← 可直接复用的项目模板
 │   ├── CLAUDE.md            ← AI 代码生成规则（通用版）
 │   ├── AGENTS.md            ← 同上（给 Codex/Hermes 等用）
-│   └── memory-bank/
-│       ├── program-design-document.md   ← 程序设计文档模板
-│       ├── tech-stack.md                ← 技术栈模板
-│       ├── implementation-plan.md       ← 实施计划模板
-│       ├── progress.md                  ← 进度记录模板
-│       ├── architecture.md              ← 架构文档模板
-│       ├── vibe-coding-core.md          ← 项目规则模板
-│       ├── g-updated-rules.md           ← 生成器 G 初始规则
-│       └── p-history.md                 ← 提示词历史初始模板
+│   └── memory-bank/         ← 8 个记忆库模板文件
+└── skill/                   ← 完整执行协议 skill（含 G/O/M、Path A/B、踩坑清单）
+    ├── SKILL.md             ← 主文件：Stage 0-4 全流程 + 20 条踩坑
+    ├── templates/
+    │   ├── mother-prompt-template.md   ← 通用母 Prompt 模板
+    │   └── saas-mother-prompt-zh.md    ← 中国 SaaS 专用变体
+    └── references/
+        ├── china-saas-stack.md            ← 中国市场技术选型（支付/数据/部署）
+        ├── data-pipeline-audit-trail.md   ← 数据管道审计模式
+        └── integration-testing-pitfalls.md ← 集成测试踩坑实录
 ```
+
+## Skill 安装（可选，推荐）
+
+`skill/` 目录是一个完整的 AI 编程执行协议，比基础模板多了：
+
+- **Path A/B 双路径决策**（快速 MVP vs 质量优先）
+- **G/O/M 三级模式**（Fast / Standard / Strict）
+- **20 条实战踩坑清单**
+- **母 Prompt 模板**（通用 + 中国 SaaS 变体）
+- **中国市场技术选型参考**（支付/数据 API/LLM 切换）
+
+### Hermes Agent 用户
+
+```bash
+cp -r vibe-coding/skill/ ~/.hermes/skills/software-development/ai-coding-workflow/
+```
+
+### 其他 AI 工具用户
+
+把 `skill/SKILL.md` 内容复制到你的项目规则文件中，或作为 AI 对话的 system prompt。
 
 ## 兼容工具
 
