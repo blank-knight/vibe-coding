@@ -217,4 +217,4 @@ AI 工具的对话窗口有限（通常 100K-200K tokens）。一个复杂项目
 3. **元生成器 M** 接收当前 G 和 P\*，输出更强的 G'
 4. G' 替换旧 G，循环继续
 
-详见 [METHODOLOGY.md](METHODOLOGY.md) 的"元提示词递归闭环"章节。
+详见 [methodology.md](methodology.md) 的"元提示词递归闭环"章节。

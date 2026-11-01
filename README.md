@@ -30,7 +30,7 @@ git clone https://github.com/axibawa/vibe-coding.git
 # 2. 复制模板到你的新项目
 cp -r vibe-coding/template/ /path/to/your-new-project/
 
-# 3. 按步骤执行（详见 GUIDE.md）
+# 3. 按步骤执行（详见 docs/guide/workflow.md）
 ```
 
 ### 方式二：手动搭建
@@ -71,21 +71,27 @@ AI 工具逐步执行（Claude Code / Codex / Cursor / 任何 AI 助手）
 
 ```
 vibe-coding/
-├── README.md                ← 你在看这个
-├── GUIDE.md                 ← 完整工作流指南（五步法）
-├── METHODOLOGY.md           ← 方法论深度解析（元提示词/胶水编程/Canvas/蜂群）
-├── LICENSE                  ← MIT
-├── template/                ← 可直接复用的项目模板
-│   ├── CLAUDE.md            ← AI 代码生成规则（通用版）
-│   ├── AGENTS.md            ← 同上（给 Codex/Hermes 等用）
-│   └── memory-bank/         ← 8 个记忆库模板文件
-└── skill/                   ← 完整执行协议 skill（含 G/O/M、Path A/B、踩坑清单）
-    ├── SKILL.md             ← 主文件：Stage 0-4 全流程 + 20 条踩坑
+├── README.md                         ← 你在看这个
+├── docs/
+│   ├── guide/                        ← 工作流与方法论
+│   │   ├── workflow.md               ← 完整工作流指南（五步法）
+│   │   └── methodology.md            ← 方法论深度解析
+│   ├── pitfalls/                     ← 实战踩坑记录
+│   │   └── lessons-learned.md        ← 高频错误 + 根因 + 修复
+│   └── skill-reference/              ← Skill 结构说明
+│       └── README.md                 ← 目录结构、安装、串联关系
+├── LICENSE                           ← MIT
+├── template/                         ← 可直接复用的项目模板
+│   ├── CLAUDE.md                     ← AI 代码生成规则（通用版）
+│   ├── AGENTS.md                     ← 同上（给 Codex/Hermes 等用）
+│   └── memory-bank/                  ← 8 个记忆库模板文件
+└── skill/                            ← 完整执行协议 skill（含 G/O/M、Path A/B、踩坑清单）
+    ├── SKILL.md                      ← 主文件：Stage 0-4 全流程 + 20 条踩坑
     ├── templates/
-    │   ├── mother-prompt-template.md   ← 通用母 Prompt 模板
-    │   └── saas-mother-prompt-zh.md    ← 中国 SaaS 专用变体
+    │   ├── mother-prompt-template.md ← 通用母 Prompt 模板
+    │   └── saas-mother-prompt-zh.md  ← 中国 SaaS 专用变体
     └── references/
-        ├── china-saas-stack.md            ← 中国市场技术选型（支付/数据/部署）
+        ├── china-saas-stack.md       ← 中国市场技术选型
         ├── data-pipeline-audit-trail.md   ← 数据管道审计模式
         └── integration-testing-pitfalls.md ← 集成测试踩坑实录
 ```
